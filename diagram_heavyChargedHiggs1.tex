@@ -1,0 +1,27 @@
+% feyn_test.tex
+\documentclass[landscape]{article}
+ \usepackage{feynmp}
+ \usepackage[pdftex]{graphicx}
+\usepackage{subfig}
+ \DeclareGraphicsRule{*}{mps}{*}{} 
+ \begin{document}
+ \begin{fmffile}{fgraphs1}
+   \begin{figure}[ht!]
+     \centering
+     %(along, up)
+     \subfloat{
+       \begin{fmfgraph*}(300,200)
+         \fmfleft{i1,i2}
+         \fmfright{o1,o2}
+         \fmf{fermion,label=$\bar{b}$}{w2,i2}
+         \fmf{gluon,label=$g$}{i1,w1}
+         \fmf{fermion,label=$t$}{w1,w2}
+         \fmf{boson,label=$H^{+}$}{w2,o2}
+         \fmf{fermion,label=$\bar{t}$}{o1,w1}
+         %      \fmfv{lab=$V^{\ast}_{ud}$,lab.dist=0.05w}{w1}
+       \end{fmfgraph*}
+       }
+   \end{figure}
+ \end{fmffile}
+ \end{document} 
+

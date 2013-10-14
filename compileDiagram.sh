@@ -1,0 +1,10 @@
+# usage: source compileDiagram.sh
+pdflatex diagram_heavyChargedHiggs1
+mpost fgraphs1
+pdflatex diagram_heavyChargedHiggs1
+pdflatex diagram_heavyChargedHiggs1
+
+pdflatex diagram_heavyChargedHiggs2
+mpost fgraphs2
+pdflatex diagram_heavyChargedHiggs2
+pdflatex diagram_heavyChargedHiggs2
